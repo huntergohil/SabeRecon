@@ -61,9 +61,9 @@ def run_recon(display_url, domain_only, output_file):
 
     wild_len = detect_wildcard_length(domain_only)
     if wild_len:
-        gobuster_cmd = f"gobuster dir -u https://{domain_only} -w /usr/share/wordlists/dirb/common.txt -b 404 -f --exclude-length {wild_len}"
+        gobuster_cmd = f"gobuster dir -u https://{domain_only} -w ./common.txt -b 404 -f --exclude-length {wild_len}"
     else:
-        gobuster_cmd = f"gobuster dir -u https://{domain_only} -w /usr/share/wordlists/dirb/common.txt -b 404 -f"
+        gobuster_cmd = f"gobuster dir -u https://{domain_only} -w ./common.txt -b 404 -f"
 
     tools = [
         (f"whois {domain_only.replace('www.', '')}", "WHOIS Lookup"),
