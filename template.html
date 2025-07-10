@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ target }} SabeRecon Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #eee;
+            padding: 20px;
+        }
+        h1 {
+            color: #e53935;
+        }
+        .timestamp {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        details {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #f44336;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            margin-top: 10px;
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 30px;">
+        <img src="logo.png" alt="SaberShield Logo" style="max-width: 200px; margin-bottom: 10px;">
+        <h1 style="margin: 0; color: #e53935;">SaberShield Cybersecurity LLC</h1>
+        <p style="font-style: italic; color: #ccc;">"Sharp Security, Solid Defense"</p>
+        <p style="color: #888;">SabeRecon v0.1</p>
+    </div>
+
+    <h1>Reconnaissance Report</h1>
+    <div class="timestamp">
+        <strong>Target:</strong> {{ target }}<br>
+        <strong>Generated:</strong> {{ timestamp }}
+    </div>
+
+    {% for section in sections %}
+    <details>
+        <summary>{{ section.title }} Result</summary>
+        <pre>{{ section.content }}</pre>
+    </details>
+    {% endfor %}
+</body>
+</html>
