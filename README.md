@@ -37,5 +37,6 @@ pip install pyfiglet termcolor jinja2
 
 
 Command to install dependencies:
-sudo apt update && sudo apt install -y curl nmap gobuster whois dnsutils python3-pip npm git && pip install --break-system-packages jinja2 pyfiglet termcolor && sudo npm install -g subfinder
+sudo apt update && sudo apt install -y curl nmap gobuster whois dnsutils python3-pip npm git wafw00f whatweb && pip install --break-system-packages jinja2 pyfiglet termcolor && sudo npm install -g subfinder
+
 
