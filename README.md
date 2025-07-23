@@ -36,7 +36,4 @@ pip install pyfiglet termcolor jinja2
 4. View the results!
 
 
-Command to install dependencies:
-
-
 
